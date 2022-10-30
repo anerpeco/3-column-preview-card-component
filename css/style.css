@@ -1,0 +1,121 @@
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+body{
+    background-color: var(--very-light-gray);
+}
+
+article{
+    max-width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 2rem 2rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards{
+    line-height: 1.6;
+    padding: 3rem 2.3rem;
+}
+
+.cards img{
+    padding-bottom: 2rem;
+}
+
+.cards h2{
+    color: var(--very-light-gray);
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.cards p{
+    color: var(--transparent-white);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1rem;
+    padding-bottom: 2rem;
+}
+
+.cards a{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: var(--very-light-gray);
+    padding: 0.8rem 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.cards a:hover,
+.cards a:focus{
+    cursor: pointer;
+    border: 0.12rem solid var(--very-light-gray);
+    background-color: transparent;
+    color: var(--very-light-gray);
+    transition: 1s;
+
+}
+
+.sedans{
+    background-color: var(--bright-orange);
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.sedans a{
+    color: var(--bright-orange);
+}
+
+.suvs{
+    background-color: var(--dark-cyan);
+}
+
+.suvs a{
+    color: var(--dark-cyan);
+}
+
+.luxury{
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.luxury a{
+    color: var(--very-dark-cyan);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+  @media screen and (min-width: 58rem) {
+
+    article{
+      display: flex;
+      flex-direction: row;
+      justify-content:center;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 58rem;
+    }
+
+    .sedans{
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    .luxury{
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+  }
