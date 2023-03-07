@@ -1,4 +1,4 @@
-:root{
+:root {
     --bright-orange: hsl(31, 77%, 52%);
     --dark-cyan: hsl(184, 100%, 22%);
     --very-dark-cyan: hsl(179, 100%, 13%);
@@ -6,116 +6,145 @@
     --very-light-gray: hsl(0, 0%, 95%);
 }
 
-body{
+body {
+    height: 100%;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: .9375rem;
+    font-weight: 400;
+    line-height: 1.5625rem;
     background-color: var(--very-light-gray);
 }
 
-article{
-    max-width: 100%;
+@media screen and (min-width: 90rem) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+article {
+    max-width: 23.4375rem;
     margin: 0 auto;
-    min-height: 100vh;
-    padding: 2rem 2rem 0.5rem;
+    padding: .5rem 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.cards{
-    line-height: 1.6;
-    padding: 3rem 2.3rem;
+@media screen and (min-width: 90rem) {
+
+    article {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        max-width: 58rem;
+        padding: 0;
+    }
 }
 
-.cards img{
-    padding-bottom: 2rem;
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
-.cards h2{
+.cards {
+    width: 20.4375rem;
+    padding: 3rem;
+}
+
+@media screen and (min-width: 90rem) {
+    .cards {
+        width: 19.1875rem;
+        padding: 3rem 2.9688rem;
+    }
+}
+
+.cards img {
+    width: 4rem;
+    margin-bottom: 2.1875rem;
+}
+
+.cards h2 {
     color: var(--very-light-gray);
     text-transform: uppercase;
-    padding-bottom: 1rem;
+    margin-bottom: 1.5625rem;
     font-family: 'Big Shoulders Display', cursive;
     font-weight: 700;
     font-size: 2.5rem;
+    line-height: 3rem;
 }
 
-.cards p{
+.cards p {
     color: var(--transparent-white);
-    font-family: 'Lexend Deca', sans-serif;
-    font-size: 1rem;
-    padding-bottom: 2rem;
+    margin-bottom: 1.5625rem;
 }
 
-.cards a{
-    font-family: 'Lexend Deca', sans-serif;
-    font-size: 1rem;
+@media screen and (min-width: 90rem) {
+    .cards p {
+        margin-bottom: 5.1875rem;
+    }
+}
+
+.cards a {
     text-decoration: none;
     background-color: var(--very-light-gray);
-    padding: 0.8rem 1.5rem;
-    border-radius: 1.5rem;
+    border-radius: 1.5625rem;
+    padding: .6875rem 1.9688rem;
 }
 
 .cards a:hover,
-.cards a:focus{
+.cards a:focus {
     cursor: pointer;
-    border: 0.12rem solid var(--very-light-gray);
+    border: .125rem solid var(--transparent-white);
     background-color: transparent;
-    color: var(--very-light-gray);
+    color: var(--transparent-white);
     transition: 1s;
-
 }
 
-.sedans{
+.sedans {
     background-color: var(--bright-orange);
     border-radius: 0.5rem 0.5rem 0 0;
 }
 
-.sedans a{
+@media screen and (min-width: 90rem) {
+    .sedans {
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+}
+
+.sedans a {
     color: var(--bright-orange);
 }
 
-.suvs{
+.suvs {
     background-color: var(--dark-cyan);
 }
 
-.suvs a{
+.suvs a {
     color: var(--dark-cyan);
 }
 
-.luxury{
+.luxury {
     background-color: var(--very-dark-cyan);
     border-radius: 0 0 0.5rem 0.5rem;
 }
 
-.luxury a{
-    color: var(--very-dark-cyan);
-}
-
-.attribution {
-    font-size: 11px;
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  }
-
-  @media screen and (min-width: 58rem) {
-
-    article{
-      display: flex;
-      flex-direction: row;
-      justify-content:center;
-      align-items: center;
-      margin: 0 auto;
-      max-width: 58rem;
-    }
-
-    .sedans{
-        border-radius: 0.5rem 0 0 0.5rem;
-    }
-
-    .luxury{
+@media screen and (min-width: 90rem) {
+    .luxury {
         border-radius: 0 0.5rem 0.5rem 0;
     }
-  }
+}
+
+.luxury a {
+    color: var(--very-dark-cyan);
+}
